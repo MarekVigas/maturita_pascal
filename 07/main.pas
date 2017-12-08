@@ -1,5 +1,5 @@
 program uloha7;
-	var a,i,sum:Integer;
+	var a,i,sum:longint;
 begin
 	write('Zadaj číslo pre vypočet faktoriálu:');
 	read(a);
