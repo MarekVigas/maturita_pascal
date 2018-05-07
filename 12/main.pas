@@ -1,18 +1,18 @@
 program uloha12;
     var y: real;
     var n,r,s: extended;
-    var x,i: longint;
+    var x,i: int64;
     var presnost: integer;
-    function faktorial(x:longint) : longint;
-    var sum,i: longint;
+    function faktorial(x:int64) : int64;
+    var sum,i: int64;
     begin
         sum := 1;
         for i := x downto 1 do sum := sum * i;
         faktorial := sum;
     end;
 
-    function power(x:longint; p:longint) : longint;
-    var i,sum: longint;
+    function power(x:int64; p:int64) : int64;
+    var i,sum: int64;
     begin
         sum := 1;
         for i := 1 to p do sum:= sum * x;
@@ -22,11 +22,11 @@ program uloha12;
 begin
     writeln('Zadaj cislo:');
     readln(x);
-    
-    y := 1; 
-    presnost := 16;
+    writeln('Zadaj presnost');
+    readln(presnost);
+    y := 1;
 
-    for i:= 1 to presnost do 
+    for i:= 1 to presnost do
     begin
         r := power(x,i);
         s := faktorial(i);
@@ -36,4 +36,5 @@ begin
     end;
     writeln(y:0:8);
     writeln(exp(x):0:8);
+    readln();
 end.
