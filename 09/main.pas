@@ -2,7 +2,7 @@ program uloha9;
 	var
 		pole_cisel: array[0..20] of	Integer;
 	var
-		i,min,min_pos: Integer;
+		i,min: Integer;
 begin
 	randomize;
 
