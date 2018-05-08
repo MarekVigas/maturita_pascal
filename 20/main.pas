@@ -1,6 +1,6 @@
 program uloha20;
     var pole: array[1..20] of integer;
-    var i,tmp: integer;
+    var i,tmp,n: integer;
     var swap: boolean;
 begin
     randomize;
@@ -11,9 +11,11 @@ begin
         write(pole[i]:2);        
     end;
 
+    n := length(pole);
+    
     repeat
         swap := False;
-        for i := 1 to 20 - 1 do
+        for i := 1 to n - 1 do
         begin
             if pole[i] > pole[i + 1] then 
             begin
@@ -22,7 +24,8 @@ begin
                 pole[i + 1] := tmp;
                 swap := True;
             end; 
-        end;  
+        end; 
+        n := n - 1;
     until (not swap);
 
     writeln();
