@@ -9,7 +9,7 @@ begin
     begin
         found := False;
         repeat
-            n := random(8) + 1;
+            n := random(48) + 1;
             if poleVyberu[n] = False then
             begin
                 poleCisel[i] := n;
